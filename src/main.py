@@ -1,12 +1,16 @@
-from utils import square, is_even, celsius_to_fahrenheit
+from utils import square, is_even, celsius_to_fahrenheit, greet
 
 def main():
-    user_input = input("Geli nambar: ")
-    n = float(user_input)
+    name = input("Enter your name: ")
+    print(greet(name))
     
-    print(f"Square: {square(n)}")
-    print(f"Is Even: {is_even(n)}")
-    print(f"Fahrenheit: {celsius_to_fahrenheit(n)}")
+    try:
+        user_input = float(input("\nEnter a number: "))
+        print(f"Square: {square(user_input)}")
+        print(f"Is Even: {is_even(user_input)}")
+        print(f"Fahrenheit Equivalent: {celsius_to_fahrenheit(user_input):.2f}°F")
+    except ValueError:
+        print("Invalid input.")
 
 if __name__ == "__main__":
     main()
