@@ -9,3 +9,5 @@ def celsius_to_fahrenheit(c):
 
 def greet(name):
     return f"Hello, {name}!"
+
+# Updated for PR demonstration
